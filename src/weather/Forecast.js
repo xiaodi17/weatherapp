@@ -1,9 +1,9 @@
 import React from "react";
 
 export default function Forecast(props) {
-  const { data, unit, switchToFiveItem, switchtToTenItem, size } = props;
+  const { data, unit, switchToFiveItem, switchtToTenItem, itemList } = props;
 
-  const daylist = data.slice(0, size).map(d => (
+  const daylist = data.slice(0, itemList).map(d => (
     <div className="weather-forecast__row">
       <span className="weather-forecast__day">{d.day}</span>
       <span className="weather-forecast__icon">

@@ -80,7 +80,7 @@ export default class WeatherChannel extends React.Component {
       ],
       unit: "C",
       curCity: "melbourne",
-      size: 5
+      itemList: 5
     };
   }
 
@@ -119,7 +119,7 @@ export default class WeatherChannel extends React.Component {
   }
 
   render() {
-    const { condition, forecast, unit, curCity, size } = this.state;
+    const { condition, forecast, unit, curCity, itemList } = this.state;
     return (
       <React.Fragment>
         <Toolbar
@@ -136,7 +136,7 @@ export default class WeatherChannel extends React.Component {
           <Forecast
             data={forecast}
             unit={unit}
-            size={size}
+            itemList={itemList}
             switchToFiveItem={() => this.switchToFiveItem()}
             switchtToTenItem={() => this.switchtToTenItem()}
           />
